@@ -1,0 +1,50 @@
+.about {
+    display: grid; /* Page contents will be a grid */
+    flex-direction: column; /* Contents will stack vertcially */
+    grid-template-columns: 1fr; /* Allows for only 1 column */
+    align-items: start;
+    margin: 100px; /* Centers the grid and adds margin for spacing */
+  }
+  
+  .name { /* The following makes each group of headshot, name, and bio be centered as a unit */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; /*Centers the text and image */
+    margin-bottom: 40px;
+  }
+  
+  .name h2 {
+    font-size: 6vw; 
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  .headshot {
+    width: 250px; /* Makes the width of the headshots responsive */
+    height: 300px; /* Fixed height for the headshots */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    padding: 5px;
+    border-radius: 50%; /* Makes the images circular */
+    border: 5px solid aliceblue; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+  }
+
+  
+  .headshot:hover {
+    transform: scale(1.1); /* Image gets larger on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bio{
+    color: aliceblue
+  }
+
+  @media (min-width: 1000px){
+    .about{
+        grid-template-columns: repeat(2,1fr); /* Allows for 2 bios once enough screen is available*/
+        gap: 30px; /* Adds space between bios */
+    }
+  }

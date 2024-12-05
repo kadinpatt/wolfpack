@@ -1,0 +1,30 @@
+
+.shop-container {
+  padding: 10px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Makes the columns resize, minimum width of 250px */
+  padding: 5px;
+}
+
+.merch-card {                   /* Defines the structure JS will put images into */
+  background-color: aliceblue;
+  border:solid 5px black;
+  aspect-ratio: 1;              /* Maintain image proportions */
+  display: flex;                /* Allow for centering of images in next step */
+  justify-content: center;
+  align-items: center;
+}
+
+.merch-card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;      /* Ensure Image wont be stretched */
+}
+
+.merch-card:hover{
+  transform: scale(1.05);
+  border: 2px solid lime;
+}
